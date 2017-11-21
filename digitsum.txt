@@ -1,0 +1,61 @@
+package de.davidgollasch.emiexercise1;
+
+import android.graphics.drawable.ColorDrawable;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import static de.davidgollasch.emiexercise1.R.id.ausgabe;
+import static de.davidgollasch.emiexercise1.R.id.berechnung;
+import static de.davidgollasch.emiexercise1.R.id.zahl;
+
+public class DigitSumActivity extends AppCompatActivity {
+
+    private TextView tvOutput;
+    private EditText etNumber;
+    private Button btnFire;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_digit_sum);
+
+        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(getResources().getColor(R.color.tuAkzentfarbe1BlauHell)));
+
+        // Initialises the views and event listeners
+        InitializeActivity();
+    }
+
+    private void InitializeActivity() {
+        tvOutput =findViewById(ausgabe);
+        btnFire = findViewById(berechnung);
+        etNumber =findViewById(zahl);
+        btnFire.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                CalculateDigitSum();
+            }
+    });
+    }
+
+    private int getDigitSum() {
+        int n = Integer.parseInt(etNumber.getText().toString());
+        int sum = 0;
+        while (n > 0) {
+            sum = sum + n % 10;
+            n = n / 10;
+        }
+        return sum;
+    }
+
+
+    private void CalculateDigitSum() {
+
+        tvOutput.setText(String.valueOf(getDigitSum()));
+        }
+
+}
+
+
