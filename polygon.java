@@ -1,9 +1,11 @@
+//import java.util.Scanner;
+
 public class polygon {
 
     public static void main(String[] args){
-      System.out.println("Soll das regelmäßige ploygon 5, 8, 10, 14, 18 oder 27 Ecken haben?")
+      System.out.print("Soll das regelmäßige ploygon 5, 8, 10, 14, 18 oder 27 Ecken haben?");
       Scanner scanner = new Scanner(System.in);
-      String input = scanner.nextLine();
+      int input = scanner.nextInt();
 
       switch(input){
       case 5:
