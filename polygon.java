@@ -5,7 +5,7 @@ public class polygon {
       Scanner scanner = new Scanner(System.in);
       String input = scanner.nextLine();
 
-      switch(i){
+      switch(input){
       case 5:
           System.out.println("<polygon points=\"50,60 36,41 14,48 14,72 36,79\" style=\"fill:yellow;stroke:purple;stroke-width:1\"/>");
           break;
