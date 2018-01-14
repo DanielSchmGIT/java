@@ -23,8 +23,12 @@
 <use xlink:href="#Kugelg" transform="translate(300,400) scale(1,1)"/>
 <use xlink:href="#Kugelg" transform="translate(300,260) scale(0.8,0.8)"/>
 <use xlink:href="#Kugelg" transform="translate(300,150) scale(0.5,0.5)"/>
-<use xlink:href="#Kugelg" transform="translate(250,500) scale(0.4,0.3)"/>
-<use xlink:href="#Kugelg" transform="translate(350,500) scale(0.4,0.3)"/>
+<ellipse cx="250" cy="500" rx="40" ry="30" fill="url(#verlauf)" stroke="black" stroke-width="2"> 
+<animateMotion id="ell1" dur="1" values="0,0;0,10;0,0" begin="2.5s;ell2.end+1s" />
+</ellipse>
+<ellipse cx="350" cy="500" rx="40" ry="30" fill="url(#verlauf)" stroke="black" stroke-width="2"> 
+<animateMotion id="ell2" dur="1" values="0,0;0,10;0,0" begin="ell1.end+1s" />
+</ellipse>
 <!--Knöpfe-->
 <use xlink:href="#Kugelk" transform="translate(300,450)"/>
 <use xlink:href="#Kugelk" transform="translate(300,410)"/>
