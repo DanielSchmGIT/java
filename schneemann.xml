@@ -41,7 +41,7 @@
 <use xlink:href="#Kugelk" transform="translate(280,138) scale(0.8,0.8)"/>
 <use xlink:href="#Kugelk" transform="translate(320,138) scale(0.8,0.8)"/>
 <!--Mund-->
-<path fill="none" stroke="black" stroke-width="2" 
+<path fill="none" stroke="black" stroke-width="2"
 d="M 280 175 c 15 10 25 10 40 0" />
 <!--Nase-->
 <path fill="orange" stroke="orange" stroke-width="3"
@@ -51,12 +51,53 @@ d="M 300 145 l 0 15 l 60 0 M 300 145 c 20 10 40 12 60 15" />
 <animateMotion id="anim1" dur="1" values="0,0;0,7.5;0,0" begin="2.5s;anim1.end+2.5s" />
 </circle>
 <!--Arme-->
-<path fill="none" stroke="brown" stroke-width="3" 
+<path fill="none" stroke="brown" stroke-width="3"
 d="M 380 260 l 50 0"/>
 <path fill="none" stroke="brown" stroke-width="3"
-d="M 430 260 l 20 -50" /> 
-<path fill="none" stroke="brown" stroke-width="3" 
+d="M 430 260 l 20 -50" />
+<path fill="none" stroke="brown" stroke-width="3"
 d="M 220 260 l-50 0 l -20 -50" />
 
+<!--Polygone-->
+<polygon points="50,60 36,41 14,48 14,72 36,79"
+  style="fill:yellow;stroke:purple;stroke-width:1">
+  <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+     values="0 30 60; 360 30 60" dur="5s" repeatCount="indefinite" />
+  </polygon>
 
+<polygon points="90,120 81,99 60,90 39,99 30,120 39,141 60,150 81,141"
+  style="fill:yellow;stroke:purple;stroke-width:1">
+  <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+     values="0 60 120; 360 60 120" dur="6s" repeatCount="indefinite" />
+  </polygon>
+
+<polygon points="45,200 42,191 35,186 25,186 18,191 15,200 18,209 25,214
+                  35,214 42,209"
+    style="fill:yellow;stroke:purple;stroke-width:1">
+    <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+       values="0 30 200; 360 30 200" dur="3s" repeatCount="indefinite" />
+    </polygon>
+
+<polygon points="625,50 623,39 616,30 606,26 594,26 584,30 577,39 575,50 577,61
+                  584,70 594,74 606,74 616,70 623,61"
+    style="fill:yellow;stroke:purple;stroke-width:1">
+    <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+       values="0 600 50; 360 600 50" dur="8s" repeatCount="indefinite" />
+    </polygon>
+
+<polygon points="583,75 581,64 575,54 567,46 556,43 544,43 534,46 525,54 519,64
+                  517,75 519,86 525,96 534,104 544,107 556,107 567,104 575,96 581,86"
+    style="fill:yellow;stroke:purple;stroke-width:1">
+    <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+       values="0 550 75; 360 550 75" dur="2s" repeatCount="indefinite" />
+    </polygon>
+
+<polygon points="627,175 626,169 624,163 621,158 616,153 611,150 605,148
+                  598,148 592,149 587,151 581,155 577,160 575,166 573,172
+                  573,178 575,184 577,190 581,195 587,199 592,201 598,202
+                  605,202 611,200 616,197 621,192 624,187 626,181"
+    style="fill:yellow;stroke:purple;stroke-width:1">
+    <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+       values="0 600 175; 360 600 175" dur="10s" repeatCount="indefinite" />
+  </polygon>
 </svg>
