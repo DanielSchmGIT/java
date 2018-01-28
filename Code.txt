@@ -1,0 +1,54 @@
+
+
+import android.app.Activity;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import java.lang.Math;
+import java.util.HashMap;
+
+public class MainActivity extends AppCompatActivity {
+    int Entropie;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        TextView textView;
+
+        Button button = (Button)findViewById(R.id.button);
+        EditText editText = (EditText)findViewById(R.id.editText);
+        textView = (TextView)findViewById(R.id.textView);
+
+
+        HashMap<Character,Integer> map = new HashMap<Character,Integer>();
+       final String s = editText.getText().toString();
+        for(int i = 0; i < s.length(); i++){
+            char c = s.charAt(i);
+            Integer val = map.get(c);
+            if(val != null){
+                map.put(c, new Integer(val + 1));
+            }else{
+                map.put(c,1);
+            }
+
+        }
+        Double values;
+        for(int i = 0; i < s.length(); i++){
+             Entropie = Entropie + (- (values*Math.log(values/s.length())));
+
+
+
+       }
+        textView =(TextView)findViewById(R.id.textView);
+        textView.setText("Entropie ="+String.valueOf(Entropie));
+
+
+    }
+
+
+    }
